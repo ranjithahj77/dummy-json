@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "0341ee2f-108f-4163-93a5-1098b75f95b2",
+		"name": "dummy json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list of products",
+			"id": "7d61122a-a7e0-42a0-ac9c-70fa4ff22e55",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/products"
+			},
+			"response": []
+		},
+		{
+			"name": "single product",
+			"id": "f32e6027-cebe-4342-a3f9-41bdb9ddb93f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"id": "dcfca8d5-1f49-46ca-aacd-b83cdd777314",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"New QA Product\",\r\n  \"price\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/product/add"
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart",
+			"id": "ba16966f-f29c-4b76-9eaf-e64212503c85",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/carts/1"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8dd1968b-5793-4705-a36a-a2ee0fb2520b",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fca9854f-2e9b-4496-b320-88188086ca52",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		}
+	]
+}
