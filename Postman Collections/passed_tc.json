@@ -33,6 +33,28 @@
 		},
 		{
 			"name": "add product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "96623afa-40cd-4ba8-8b67-6aac53e9aec4",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(10001);\r",
+							"});\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"title\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "dcfca8d5-1f49-46ca-aacd-b83cdd777314",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
