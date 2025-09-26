@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"New QA Product\",\r\n  \"price\": 500\r\n}",
+					"raw": "{\r\n  \"title\": \"New truco feature Product\",\r\n  \"price\": 500\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
